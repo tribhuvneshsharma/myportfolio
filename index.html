@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Tribhuvnesh Sharma - Undergraduate at IIT Patna proficient in C/C++, Python, AI Agents, automated pipelines, and full-stack engineering.">
     <title>Tribhuvnesh Sharma | Portfolio</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">TS</div>
-        <div class="hamburger">
+        <a href="#about" class="logo">TS</a>
+        <button class="hamburger" aria-label="Toggle navigation">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </div>
+        </button>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#achievements">Achievements</a></li>
             <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -33,62 +36,134 @@
             <div class="about-content">
                 <p class="greeting-prefix">Hello, I'm</p>
                 <h1>Tribhuvnesh Sharma</h1>
-                <p>I'm a passionate Civil Engineering student at IIT Patna, focused on building innovative tech solutions. My journey in technology has been driven by a deep curiosity for how things work and a desire to create meaningful impact through code.</p>
+                <p class="hero-bio">
+                    Undergraduate at IIT Patna proficient in C/C++, Python, Data Structures, and Algorithms. Experienced in building AI agents, automated data pipelines, and full-stack web applications, with a strong focus on competitive programming and scalable software engineering.
+                </p>
                 
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn">View My Work</a>
-                    <a href="resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
+                    <a href="#projects" class="btn"><i class="fas fa-folder-open"></i> View Projects</a>
+                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-file-alt"></i> View Resume</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Get In Touch</a>
                 </div>
 
                 <div class="detailed-about">
                     <!-- Education subsection -->
                     <div class="sub-section">
-                        <i class="fas fa-graduation-cap sub-icon"></i>
+                        <div class="sub-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
                         <div class="sub-info">
                             <h3>Education</h3>
-                            <p class="edu-deg">B.Tech in Civil Engineering</p>
-                            <p class="location-date">Indian Institute of Technology Patna | 2025-2029</p>
-                        </div>
-                    </div>
+                            
+                            <div class="edu-item">
+                                <p class="edu-deg">Bachelor of Technology, Civil Engineering <span class="cpi-tag">CPI: 8.54 / 10</span></p>
+                                <p class="location-date">Indian Institute of Technology (IIT), Patna &bull; 2025 – 2029</p>
+                            </div>
 
-                    <!-- Technical Focus subsection -->
-                    <div class="sub-section">
-                        <i class="fas fa-code sub-icon"></i>
-                        <div class="sub-info">
-                            <h3>Technical Focus</h3>
-                            <div class="tags detailed-tags">
-                                <span>C/C++</span>
-                                <span>DSA</span>
-                                <span>Software Development</span>
-                                <span>Problem solving</span>
+                            <div class="edu-item">
+                                <p class="edu-deg">Senior Secondary & Secondary Education</p>
+                                <p class="location-date">LBS Senior Secondary School, Bhadra &bull; Class XII (PCM): 95.60% | Class X: 93.17%</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Experience subsection -->
+                    <!-- Core Competencies subsection -->
                     <div class="sub-section">
-                        <i class="fas fa-briefcase sub-icon"></i>
+                        <div class="sub-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
                         <div class="sub-info">
-                            <h3>Experience</h3>
-                            <div class="exp-item">
-                                <p><strong>Outreach Manager</strong></p>
-                                <p class="location-date">STC (Students Technical Council), IIT Patna | Jul 2026 - Present</p>
-                            </div>
-                            <div class="exp-item" style="margin-top: 12px;">
-                                <p><strong>Sub-Coordinator</strong></p>
-                                <p class="location-date">Association of Civil Engineers (ACE), IIT Patna | Jul 2026 - Present</p>
+                            <h3>Core Focus & Competencies</h3>
+                            <div class="skill-tags">
+                                <span>Data Structures &amp; Algorithms</span>
+                                <span>AI Agents &amp; MCP</span>
+                                <span>Object-Oriented Programming (OOP)</span>
+                                <span>Competitive Programming</span>
+                                <span>C / C++</span>
+                                <span>Python</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Profile photo -->
+            <!-- Profile photo (LCP element with fetchpriority="high") -->
             <div class="about-photo">
                 <div class="photo-wrapper">
-                    <img src="profile.jpeg" alt="Tribhuvnesh Sharma Profile Photo" class="profile-img">
+                    <img src="profile.png" alt="Tribhuvnesh Sharma Profile Photo" class="profile-img" fetchpriority="high">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="skills fade-in">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            
+            <!-- Programming Languages -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming Languages</h3>
+                </div>
+                <div class="skill-tags">
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Web & Backend -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fas fa-server"></i>
+                    <h3>Web &amp; Backend</h3>
+                </div>
+                <div class="skill-tags">
+                    <span>FastAPI</span>
+                    <span>Next.js</span>
+                    <span>REST APIs</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                </div>
+            </div>
+
+            <!-- Libraries & Tools -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fas fa-tools"></i>
+                    <h3>Libraries &amp; Tools</h3>
+                </div>
+                <div class="skill-tags">
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Ollama</span>
+                    <span>Model Context Protocol (MCP)</span>
+                    <span>PostgreSQL</span>
+                    <span>Scrapy</span>
+                    <span>Playwright</span>
+                    <span>Raylib</span>
+                    <span>AutoCAD</span>
+                </div>
+            </div>
+
+            <!-- Core Competencies -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fas fa-cubes"></i>
+                    <h3>Core Competencies</h3>
+                </div>
+                <div class="skill-tags">
+                    <span>Data Structures &amp; Algorithms</span>
+                    <span>Object-Oriented Programming (OOP)</span>
+                    <span>Competitive Programming</span>
+                    <span>Codeforces</span>
+                    <span>LeetCode</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -97,121 +172,263 @@
         <h2>Featured Projects</h2>
         <div class="project-grid">
             
-            <!-- Project Card 1 -->
+            <!-- Project Card 1: Structural Engineering Local AI Agent -->
             <div class="project-card">
-                <h3>Algorithmic Problem Solver</h3>
-                <p>High-performance solutions for complex data structure challenges and competitive programming logic.</p>
-                <div class="tags">
-                    <span>C/C++</span>
-                    <span>DSA</span>
-                    <span>CP</span>
+                <div class="project-header">
+                    <span class="project-badge">AI / LLM &amp; Systems</span>
+                    <h3>Structural Engineering Local AI Agent</h3>
                 </div>
-                <div class="project-links-dual">
-                    <a href="https://codeforces.com/profile/tribhuvneshsharma" target="_blank" class="project-link">View on Codeforces &rarr;</a>
-                    <a href="https://leetcode.com/u/sharmaji777/" target="_blank" class="project-link">View on LeetCode &rarr;</a>
+                <p class="project-desc">Autonomous local AI agent built to compute beam deflection and safety limits deterministically.</p>
+                <ul class="project-bullets">
+                    <li>Built a local AI agent using Python and Qwen 2.5 via Ollama to autonomously compute beam deflection and safety limits.</li>
+                    <li>Connected the model to a custom Model Context Protocol (MCP) server to sequence deterministic calculations and eliminate LLM hallucinations.</li>
+                </ul>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Ollama</span>
+                    <span>MCP</span>
+                    <span>Qwen 2.5</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/tribhuvneshsharma/structural_agent" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub &rarr;
+                    </a>
                 </div>
             </div>
 
-            <!-- Achievement Card -->
+            <!-- Project Card 2: Aero-Metrics -->
             <div class="project-card">
-                <h3>The Integral Cup '26</h3>
-                <p>Secured All India Rank (AIR) 62 in Season 1 of this prestigious mathematics competition sponsored by Optiver.</p>
-                <div class="tags">
-                    <span>AIR 62</span>
-                    <span>Problem Solving</span>
-                    <span>Optiver</span>
+                <div class="project-header">
+                    <span class="project-badge highlight"><i class="fas fa-trophy"></i> Smart India Hackathon 2026</span>
+                    <h3>Aero-Metrics (Real-Time Airfare Price Index)</h3>
                 </div>
-                <a href="https://www.linkedin.com/posts/tribhuvnesh-sharma_integralcup2026-mathematics-integration-share-7444461245572931584-uIPL/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF77LBcBmYHk8BTeBDCxRQ-8RR-KJSyHM6Q" target="_blank" class="project-link">View Details &rarr;</a>
+                <p class="project-desc">Automated, high-frequency web scraping pipeline and dynamic real-time price indexing engine.</p>
+                <ul class="project-bullets">
+                    <li>Engineered an automated, high-frequency web scraping pipeline using Playwright and Scrapy across 16 airline and OTA routes.</li>
+                    <li>Implemented a dynamic price index engine calibrated with DGCA traffic weights and served real-time analytics via FastAPI and Next.js.</li>
+                </ul>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>Next.js</span>
+                    <span>PostgreSQL</span>
+                    <span>Scrapy</span>
+                    <span>Playwright</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/tribhuvneshsharma/Aero-Metrics" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub &rarr;
+                    </a>
+                </div>
             </div>
 
-            <!-- Project Card 3 -->
+            <!-- Project Card 3: Snake Game Architecture -->
             <div class="project-card">
-                <h3>Bridge It Up - Samnivesha '26</h3>
-                <p>Secured 2nd rank in this award-winning structural engineering project integrating civil engineering principles with efficient design execution.</p>
-                <div class="tags">
-                    <span>Rank 2</span>
-                    <span>Engineering</span>
-                    <span>Design</span>
+                <div class="project-header">
+                    <span class="project-badge">Systems &amp; Game Dev</span>
+                    <h3>Snake Game Architecture</h3>
                 </div>
-                <a href="WhatsApp Image 2026-08-01 at 1.40.23 PM.jpeg" target="_blank" class="project-link">View Project &rarr;</a>
+                <p class="project-desc">2D arcade game built from scratch in C with custom game loop logic and real-time graphics rendering.</p>
+                <ul class="project-bullets">
+                    <li>Developed a 2D Snake game utilizing the Raylib library in C with real-time frame rendering and custom game loop logic.</li>
+                    <li>Implemented collision detection algorithms, state management, and dynamic memory handling.</li>
+                </ul>
+                <div class="tags">
+                    <span>C</span>
+                    <span>Raylib</span>
+                    <span>Game Loops</span>
+                    <span>Memory Management</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/tribhuvneshsharma/Snake-Game" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub &rarr;
+                    </a>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements fade-in">
-        <h2>Achievements</h2>
-        <div class="achievement-container">
-            <!-- LeetCode Card -->
-            <div class="achievement-card fade-in">
-                <h3 style="margin-top: 0;">LeetCode & Codeforces</h3>
-                <div class="achievement-details">
-                    <div class="stat-row">
-                        <div class="stat-col">
-                            <span class="stat-title">Problems Solved</span>
-                            <span class="stat-num">100+</span>
-                        </div>
-                        <div class="stat-col">
-                            <span class="stat-title">Focus Areas</span>
-                            <span class="stat-text">DSA & Algorithms</span>
-                        </div>
+    <!-- Leadership & Experience Section -->
+    <section id="experience" class="experience fade-in">
+        <h2>Leadership &amp; Experience</h2>
+        <div class="experience-grid">
+            
+            <!-- Experience 1: GDG IIT Patna -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-role-info">
+                        <h3>Sponsorship Manager</h3>
+                        <p class="exp-org">Google Developer Group (GDG), IIT Patna</p>
                     </div>
-                    <p class="achievement-note">Consistent problem solver on the platform.</p>
+                    <span class="exp-badge">Jul 2026 – Present</span>
                 </div>
-            </div>
-
-            <!-- Extra-Curriculars Card -->
-            <div class="achievement-card fade-in">
-                <i class="fas fa-trophy extracurricular-icon achievement-main-icon"></i>
-                <h3>Extra-Curriculars</h3>
-                <ul class="check-list">
-                    <li><i class="fas fa-check-circle"></i> <span class="location-date">Aspire Leaders Program, Aspire Institute (Apr 2026 - Jun 2026)</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span class="location-date">Outreach Manager, STC (Students Technical Council) (Jul 2026 - Present)</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span class="location-date">Sub-Coordinator, Association of Civil Engineers (Jul 2026 - Present)</span></li>
+                <ul class="exp-bullets">
+                    <li>Drive corporate sponsorships and industry partnerships for campus-wide developer workshops, speaker sessions, and hackathons.</li>
                 </ul>
             </div>
+
+            <!-- Experience 2: STC IIT Patna -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-role-info">
+                        <h3>Outreach Manager</h3>
+                        <p class="exp-org">Students Technical Council (STC), IIT Patna</p>
+                    </div>
+                    <span class="exp-badge">Jul 2026 – Present</span>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Lead external communications and outreach initiatives to expand student participation across technical clubs and inter-college events.</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
-    <!-- Certificates Section -->
+    <!-- Honors & Awards Section -->
+    <section id="achievements" class="achievements fade-in">
+        <h2>Honors &amp; Awards</h2>
+        <div class="honors-grid">
+            
+            <!-- Award 1: The Integral Cup 2026 -->
+            <div class="honor-card">
+                <div class="honor-icon"><i class="fas fa-trophy"></i></div>
+                <div class="honor-rank">AIR 62</div>
+                <h3>The Integral Cup 2026</h3>
+                <p>Achieved All India Rank (AIR) 62 in Round 1 of the national mathematics competition sponsored by Optiver.</p>
+            </div>
+
+            <!-- Award 2: JEE Advanced -->
+            <div class="honor-card">
+                <div class="honor-icon"><i class="fas fa-medal"></i></div>
+                <div class="honor-rank">Top 1%</div>
+                <h3>JEE Advanced</h3>
+                <p>Secured a Top 1% rank out of all participating candidates nationwide.</p>
+            </div>
+
+            <!-- Award 3: DST-INSPIRE Scholarship -->
+            <div class="honor-card">
+                <div class="honor-icon"><i class="fas fa-award"></i></div>
+                <div class="honor-rank">Top 1%</div>
+                <h3>DST-INSPIRE Scholarship</h3>
+                <p>Eligible for official scholarship from Govt. of India for ranking in the Top 1% of the Class XII Board Examinations.</p>
+            </div>
+
+            <!-- Award 4: Naukri Campus Young Turks 2025 -->
+            <div class="honor-card">
+                <div class="honor-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="honor-rank">96.33 %ile</div>
+                <h3>Naukri Campus Young Turks 2025</h3>
+                <p>Scored 96.33 percentile in the comprehensive national technical and aptitude evaluation.</p>
+            </div>
+
+        </div>
+
+        <!-- Competitive Programming Card -->
+        <div class="cp-showcase">
+            <h3><i class="fas fa-code"></i> Competitive Programming</h3>
+            <p>Active competitive programmer with 100+ problems solved in Data Structures &amp; Algorithms.</p>
+            <div class="cp-links">
+                <a href="https://codeforces.com/profile/tribhuvneshsharma" target="_blank" rel="noopener noreferrer" class="btn btn-outline cp-btn">
+                    <i class="fas fa-chart-bar"></i> Codeforces Profile &rarr;
+                </a>
+                <a href="https://leetcode.com/u/sharmaji777/" target="_blank" rel="noopener noreferrer" class="btn btn-outline cp-btn">
+                    <i class="fas fa-laptop-code"></i> LeetCode Profile &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Workshops Section -->
     <section id="certificates" class="certificates fade-in">
-        <h2>Certificates & Competitions</h2>
+        <h2>Certifications &amp; Workshops</h2>
+        
+        <!-- Job Simulations and Technical Workshops -->
+        <div class="cert-simulations-grid">
+            
+            <!-- Job Simulations -->
+            <div class="simulation-card">
+                <div class="sim-header">
+                    <div class="sim-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div>
+                        <span class="cert-year">Oct 2025</span>
+                        <h3 class="cert-title">Job Simulations</h3>
+                        <p class="sim-issuer">Forage</p>
+                    </div>
+                </div>
+                <p class="cert-desc">
+                    Completed <strong>AWS Solution Architecture</strong> and <strong>Deloitte Tech</strong> Job Simulations via Forage, gaining practical skills in cloud solutions and enterprise tech consulting.
+                </p>
+                <div class="tags" style="margin-top: 1rem; margin-bottom: 0;">
+                    <span>AWS Architecture</span>
+                    <span>Deloitte Tech</span>
+                    <span>Forage</span>
+                </div>
+            </div>
+
+            <!-- Technical Workshops -->
+            <div class="simulation-card">
+                <div class="sim-header">
+                    <div class="sim-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div>
+                        <span class="cert-year">2026</span>
+                        <h3 class="cert-title">Technical Workshops</h3>
+                        <p class="sim-issuer">IIT Patna &amp; Tech Sprints</p>
+                    </div>
+                </div>
+                <p class="cert-desc">
+                    Active participant in cutting-edge multimodal AI, mobile systems, and hack sprints:
+                </p>
+                <ul class="exp-bullets" style="margin-top: 0.5rem; margin-bottom: 0;">
+                    <li><strong>ACM SIGMM Multimodal Reasoning Workshop</strong> (IIT Patna)</li>
+                    <li><strong>Droidrun DevSprint 2026</strong></li>
+                    <li><strong>Techquest</strong></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Featured Credentials with Certificate Images -->
+        <h3 class="sub-heading-center">Featured Certifications &amp; Contests</h3>
         <div class="cert-grid">
             
-            <!-- Certificate Card 1 -->
+            <!-- Certificate Card 1: Integral Cup -->
             <div class="cert-card">
                 <div class="cert-img-container">
-                    <img src="integral_cup.png" alt="Integral Cup 2026 Certificate" class="cert-img">
+                    <img src="integral_cup.png" alt="Integral Cup 2026 Certificate" class="cert-img" loading="lazy">
                 </div>
                 <div class="cert-content">
                     <span class="cert-year">2026</span>
-                    <h3 class="cert-title">Integral Cup 2026 Season 1</h3>
-                    <p class="cert-desc">Earned qualification for Round 2 in the online olympiad sponsored by Optiver.</p>
+                    <h3 class="cert-title">The Integral Cup 2026 Season 1</h3>
+                    <p class="cert-desc">Achieved All India Rank 62 in Round 1 of the national mathematics competition sponsored by Optiver.</p>
                 </div>
             </div>
 
-            <!-- Certificate Card 2 -->
+            <!-- Certificate Card 2: Aspire Leaders -->
             <div class="cert-card">
                 <div class="cert-img-container">
-                    <img src="aspire_leaders.png" alt="Aspire Leaders Program Certificate" class="cert-img">
+                    <img src="aspire_leaders.png" alt="Aspire Leaders Program Certificate" class="cert-img" loading="lazy">
                 </div>
                 <div class="cert-content">
                     <span class="cert-year">2026</span>
                     <h3 class="cert-title">Aspire Leaders Program</h3>
-                    <p class="cert-desc">Successfully completed 40 hours of leadership development coursework.</p>
+                    <p class="cert-desc">Completed 40 hours of leadership and multidisciplinary professional development coursework.</p>
                 </div>
             </div>
 
-            <!-- Certificate Card 3 -->
+            <!-- Certificate Card 3: Samnivesha Bridge It Up -->
             <div class="cert-card">
                 <div class="cert-img-container">
-                    <img src="samnivesha.png" alt="Samnivesha Bridge It Up Certificate" class="cert-img">
+                    <img src="samnivesha.png" alt="Samnivesha Bridge It Up Certificate" class="cert-img" loading="lazy">
                 </div>
                 <div class="cert-content">
                     <span class="cert-year">2026</span>
                     <h3 class="cert-title">Bridge It Up Competition</h3>
-                    <p class="cert-desc">Secured 2nd position during Samnivesha '26 at IIT Patna.</p>
+                    <p class="cert-desc">Secured 2nd position overall during Samnivesha '26 at IIT Patna for resilient structural design.</p>
                 </div>
             </div>
 
@@ -226,19 +443,19 @@
             <!-- Info column -->
             <div class="contact-info">
                 <h3>Contact Information</h3>
-                <p>I am actively seeking software engineering internships and open to new opportunities.</p>
+                <p>I am actively seeking software engineering and AI internship opportunities and open to exciting collaborations.</p>
                 
                 <ul class="contact-list">
                     <li>
-                        <i class="fas fa-envelope contact-icon"></i>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <a href="mailto:tribhuvneshofficial@gmail.com" class="contact-link">tribhuvneshofficial@gmail.com</a>
                     </li>
                     <li>
-                        <i class="fas fa-phone-alt contact-icon"></i>
-                        <a href="tel:+916378097879" class="contact-link">+91 6378097879</a>
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <a href="tel:+916378097879" class="contact-link">+91-63780-97879</a>
                     </li>
                     <li>
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <span>Hanumangarh, Rajasthan, India</span>
                     </li>
                 </ul>
@@ -248,15 +465,23 @@
             <div class="contact-social">
                 <h3>Connect with Me</h3>
                 <div class="social-cards">
-                    <a href="https://github.com/tribhuvneshsharma" target="_blank" class="social-card">
+                    <a href="https://github.com/tribhuvneshsharma" target="_blank" rel="noopener noreferrer" class="social-card">
                         <i class="fab fa-github social-card-icon"></i>
                         <span>GitHub</span>
                     </a>
-                    <a href="https://linkedin.com/in/tribhuvnesh-sharma" target="_blank" class="social-card">
+                    <a href="https://linkedin.com/in/tribhuvnesh-sharma" target="_blank" rel="noopener noreferrer" class="social-card">
                         <i class="fab fa-linkedin-in social-card-icon"></i>
                         <span>LinkedIn</span>
                     </a>
-                    <a href="https://instagram.com/tribhuvneshsharma2007" target="_blank" class="social-card">
+                    <a href="https://codeforces.com/profile/tribhuvneshsharma" target="_blank" rel="noopener noreferrer" class="social-card">
+                        <i class="fas fa-chart-bar social-card-icon"></i>
+                        <span>Codeforces</span>
+                    </a>
+                    <a href="https://leetcode.com/u/sharmaji777/" target="_blank" rel="noopener noreferrer" class="social-card">
+                        <i class="fas fa-code social-card-icon"></i>
+                        <span>LeetCode</span>
+                    </a>
+                    <a href="https://instagram.com/tribhuvneshsharma2007" target="_blank" rel="noopener noreferrer" class="social-card">
                         <i class="fab fa-instagram social-card-icon"></i>
                         <span>Instagram</span>
                     </a>

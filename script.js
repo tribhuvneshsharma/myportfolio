@@ -2,25 +2,34 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-// Listen for clicks on the hamburger menu
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
-
-// Close the mobile menu when any link is clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
+if (hamburger && navLinks) {
+    // Listen for clicks on the hamburger menu
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
     });
-});
+
+    // Close the mobile menu when any nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close the mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
 
 // 2. Scroll Animation (Intersection Observer)
-// This watches elements as you scroll and adds the 'visible' class when they appear
 const observerOptions = {
     root: null,
-    threshold: 0.15, // Triggers when 15% of the element is visible
+    threshold: 0.12, // Triggers when 12% of the element is visible
     rootMargin: "0px"
 };
 
@@ -29,9 +38,8 @@ const observer = new IntersectionObserver(function(entries, observer) {
         if (!entry.isIntersecting) {
             return;
         }
-        // Add the visible class to trigger the CSS transition
+        // Add the visible class to trigger CSS transition
         entry.target.classList.add('visible');
-        
         // Stop observing once it has faded in
         observer.unobserve(entry.target);
     });
